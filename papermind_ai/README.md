@@ -1,46 +1,69 @@
 PaperMind AI – Research Paper Assistant
 Overview
 
-PaperMind AI is an AI-powered research assistant designed to help users quickly understand and extract insights from academic papers. Instead of manually reading long documents, users can ask natural language questions and receive context-aware answers generated through a Retrieval-Augmented Generation (RAG) pipeline.
+PaperMind AI is an AI-powered research paper assistant designed to help users quickly understand and extract insights from academic documents. Instead of manually reading lengthy research papers, users can ask natural language questions and receive context-aware answers.
 
-The system converts research documents into vector embeddings and performs semantic search to retrieve the most relevant sections before generating answers. This demonstrates how modern AI infrastructure can be used to build intelligent document understanding systems.
+The system uses semantic search and a Retrieval-Augmented Generation (RAG) pipeline to retrieve the most relevant sections of a document before generating responses. This project demonstrates how modern AI infrastructure can be used to build intelligent document understanding systems.
 
 Problem Statement
 
-Research papers are often long and complex, making it difficult to quickly locate specific information such as methodology, models used, or research objectives. Traditional keyword search fails to capture semantic meaning.
+Research papers often contain large amounts of complex information, making it difficult and time-consuming to locate specific insights such as methodologies, models used, or study objectives. Traditional keyword-based search cannot capture the semantic meaning of queries.
 
-PaperMind AI addresses this challenge by transforming research documents into vector representations, enabling semantic retrieval and intelligent question answering over the document.
+PaperMind AI addresses this challenge by converting research documents into vector embeddings, enabling semantic retrieval and AI-driven question answering across the document.
 
-System Architecture
-Document  
-   ↓  
-Text Extraction  
-   ↓  
-Text Chunking  
-   ↓  
-Embedding Generation  
-   ↓  
-Vector Similarity Search  
-   ↓  
-Context Retrieval  
-   ↓  
-Question Answering Model  
-   ↓  
+System Design & Technical Approach
+
+The system follows a Retrieval-Augmented Generation (RAG) architecture that enables intelligent question answering over research documents.
+
+System Pipeline
+Document
+   ↓
+Text Extraction
+   ↓
+Text Chunking
+   ↓
+Embedding Generation
+   ↓
+Vector Similarity Search
+   ↓
+Context Retrieval
+   ↓
+Question Answering Model
+   ↓
 Final Answer
+Technical Workflow
 
-This architecture demonstrates a practical implementation of RAG-based AI systems used in modern AI applications.
+The research document is first processed and converted into text.
+
+The text is divided into smaller chunks to improve retrieval accuracy.
+
+Each chunk is converted into vector embeddings using Sentence Transformers.
+
+A semantic similarity search retrieves the most relevant chunks for a given query.
+
+The retrieved context is passed to a question-answering model to generate the final response.
+
+This pipeline demonstrates a practical implementation of AI-powered semantic retrieval systems used in modern AI applications.
+
+Use of Endee Vector Database
+
+This project is built using the Endee repository as the base environment, which is designed for building AI systems that rely on vector search and semantic retrieval.
+
+In this project, document embeddings are used to perform vector similarity search, which forms the core retrieval mechanism of the RAG pipeline. The system retrieves the most relevant document chunks for a given user query before generating answers.
+
+This demonstrates how vector-based search systems like Endee can power AI-driven applications such as semantic search and intelligent document assistants.
 
 Technologies Used
 
 Python
 
-Sentence Transformers – for embedding generation
+Sentence Transformers – embedding generation
 
-HuggingFace Transformers – for question answering
+HuggingFace Transformers – question answering model
 
-Vector Similarity Search
+Semantic Vector Search
 
-Retrieval-Augmented Generation (RAG) Pipeline
+Retrieval-Augmented Generation (RAG)
 
 Endee Vector Database Repository (Project Base)
 
@@ -53,6 +76,18 @@ papermind_ai/
 ├── main.py
 │
 └── README.md
+Setup and Execution
+1. Clone the repository
+git clone https://github.com/Arinmudgal05/endee
+2. Navigate to the project directory
+cd papermind_ai
+3. Install dependencies
+pip install sentence-transformers transformers scikit-learn numpy
+4. Run the application
+python main.py
+
+The system will allow users to ask questions about the research document and generate answers based on the retrieved context.
+
 Proof of Execution
 
-A demonstration screenshot showing the system running and answering questions has been included in the repository as proof of successful execution.(in proof folder)
+A demonstration screenshot showing the system running and answering questions has been included in the repository as proof of successful execution.
