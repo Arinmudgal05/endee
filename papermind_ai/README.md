@@ -1,25 +1,58 @@
+PaperMind AI – Research Paper Assistant
+Overview
 
-# PaperMind AI – Research Paper Assistant
+PaperMind AI is an AI-powered research assistant designed to help users quickly understand and extract insights from academic papers. Instead of manually reading long documents, users can ask natural language questions and receive context-aware answers generated through a Retrieval-Augmented Generation (RAG) pipeline.
 
-## Overview
-PaperMind AI is an AI-powered research paper assistant that enables users to ask natural language questions about academic documents. The system uses semantic search and a Retrieval-Augmented Generation (RAG) pipeline to retrieve relevant document sections and generate accurate answers.
+The system converts research documents into vector embeddings and performs semantic search to retrieve the most relevant sections before generating answers. This demonstrates how modern AI infrastructure can be used to build intelligent document understanding systems.
 
-This project demonstrates practical usage of vector embeddings, semantic search, and AI-driven retrieval systems.
+Problem Statement
 
-## Problem Statement
-Reading and analyzing long research papers is time-consuming. Researchers often need to locate specific insights quickly. PaperMind AI solves this by converting research documents into vector embeddings and enabling intelligent question answering over the document.
+Research papers are often long and complex, making it difficult to quickly locate specific information such as methodology, models used, or research objectives. Traditional keyword search fails to capture semantic meaning.
 
-## System Architecture
+PaperMind AI addresses this challenge by transforming research documents into vector representations, enabling semantic retrieval and intelligent question answering over the document.
 
-Document → Text Extraction → Chunking → Embeddings → Vector Search → Context Retrieval → QA Model → Answer
+System Architecture
+Document  
+   ↓  
+Text Extraction  
+   ↓  
+Text Chunking  
+   ↓  
+Embedding Generation  
+   ↓  
+Vector Similarity Search  
+   ↓  
+Context Retrieval  
+   ↓  
+Question Answering Model  
+   ↓  
+Final Answer
 
-## Technologies Used
+This architecture demonstrates a practical implementation of RAG-based AI systems used in modern AI applications.
 
-- Python
-- Sentence Transformers (Embeddings)
-- HuggingFace Transformers
-- Semantic Vector Search
-- Retrieval-Augmented Generation (RAG)
-- Endee Vector Database (Repository Base)
+Technologies Used
 
-## Project Structure
+Python
+
+Sentence Transformers – for embedding generation
+
+HuggingFace Transformers – for question answering
+
+Vector Similarity Search
+
+Retrieval-Augmented Generation (RAG) Pipeline
+
+Endee Vector Database Repository (Project Base)
+
+Project Structure
+papermind_ai/
+│
+├── backend/
+│   └── rag_pipeline.py
+│
+├── main.py
+│
+└── README.md
+Proof of Execution
+
+A demonstration screenshot showing the system running and answering questions has been included in the repository as proof of successful execution.(in proof folder)
